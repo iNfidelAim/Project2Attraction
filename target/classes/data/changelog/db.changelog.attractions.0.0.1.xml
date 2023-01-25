@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+
+    <changeSet id="2" author="ruslan">
+        <createTable tableName="attraction">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"></constraints>
+            </column>
+
+            <column name="name_of_attraction" type="varchar(100)" ></column>
+            <column name="date_of_build" type="date" ></column>
+            <column name="short_description" type="string" ></column>
+            <column name="type_of_attraction" type="enum" ></column>
+            <column name="city_id" type="int" ></column>
+        </createTable>
+    </changeSet>
+
+
+    <changeSet id="2" author="Ruslan">
+        <insert tableName="attractions">
+            <column name="name_of_attraction" value="Resurrection Mountain"></column>
+            <column name="date_of_build" value="1604-01-01"></column>
+            <column name="short_description" value="Very beautiful place"></column>
+            <column name="type_of_attraction" value="Музей"></column>
+            <column name="city_id" value="1"></column>
+        </insert>
+        <insert tableName="city">
+            <column name="name_of_attraction" value="City Park"></column>
+            <column name="date_of_build" value="1886-01-01"></column>
+            <column name="short_description" value="Very beautiful place"></column>
+            <column name="type_of_attraction" value="Сооружение"></column>
+            <column name="city_id" value="1"></column>
+        </insert>
+        <insert tableName="city">
+            <column name="name_of_attraction" value="Central Chapel"></column>
+            <column name="date_of_build" value="1914-01-01"></column>
+            <column name="short_description" value="Very beautiful place"></column>
+            <column name="type_of_attraction" value="Здание"></column>
+            <column name="city_id" value="2"></column>
+        </insert>
+        <insert tableName="city">
+            <column name="name_of_attraction" value="Monument of Glory"></column>
+            <column name="date_of_build" value="1967-01-01"></column>
+            <column name="short_description" value="Very beautiful place"></column>
+            <column name="type_of_attraction" value="Памятник"></column>
+            <column name="city_id" value="2"></column>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
