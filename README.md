@@ -2,7 +2,7 @@
 Attractions in the Cities.  Spring Boot, Hibernate, REST, Liquibase, PostgreSQL.
 
 
-REST-сервис для хранения данных о городских достопримечательностей.
+REST-сервис для хранения данных о городских достопримечательностях.
 
 Структура данных:
 
